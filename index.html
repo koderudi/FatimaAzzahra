@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Fatima Azzahra</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+            margin: 0;
+            padding: 0;
+        }
+        .iframe-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: auto;
+        }
+        .fade-text {
+            color: rgba(173, 216, 230, 0.7);
+        }
+        .popup {
+            position: fixed;
+            bottom: 4px;
+            right: 4px;
+            width: 16rem;
+            padding: 1rem;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            cursor: move;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .popup.large {
+            width: 80vw;
+            height: 50vh;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+        }
+        .close-btn {
+            display: none;
+            margin-top: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .close-btn.show {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header class="text-gray-800 text-center py-2 bg-white shadow-md fixed top-0 left-0 w-full z-10">
+        <h1 class="text-lg font-semibold">HBD FATIMA AZZAHRA</h1>
+        <p class="fade-text text-sm">By Rudi Prasetyo</p>
+    </header>
+
+    <main class="iframe-container">
+        <iframe id="iframe-content" src="https://koderudi.github.io/hbd-fa/?name=Fatima%20Azzahra&date=Oct%2017,%202024,%2000:00&born=1999&yearly=true"></iframe>
+    </main>
+    
+    
+
+    <div id="popup" class="popup">
+        <h2 class="text-lg font-semibold">Selamat Ulang Tahun!</h2>
+        <p id="popup-message" class="mt-2 text-sm"></p>
+        <button id="close-btn" class="close-btn">Close</button>
+    </div>
+    
+    <script src="https://rawcdn.githack.com/koderudi/hbd-fa/refs/heads/main/public/tambahan.js"></script>
+</body>
+      </html>
